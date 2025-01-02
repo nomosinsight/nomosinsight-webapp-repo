@@ -187,7 +187,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Hero Image Section */}
-            <div className="relative flex-1 w-full">
+            <div className="relative w-1/3 lg:w-2/5">
               <motion.div
                 ref={imageRef}
                 style={{ y: springY, scale }}
@@ -199,7 +199,7 @@ export default function Hero() {
                 <img
                   src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=600&h=700&q=80"
                   alt="Software Development"
-                  className="w-full h-full object-cover rounded-lg shadow-2xl"
+                  className="w-full h-[400px] object-cover rounded-lg shadow-2xl"
                 />
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-lg"

@@ -15,7 +15,7 @@ export default function Testimonials() {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 416; // card width (400) + margin (16)
+      const scrollAmount = 316; // card width (300) + margin (16)
       const currentScroll = scrollContainerRef.current.scrollLeft;
       const targetScroll = direction === 'left' 
         ? currentScroll - scrollAmount 
@@ -94,11 +94,11 @@ export default function Testimonials() {
                 whileHover={{ scale: 1.2 }}
                 onClick={() => {
                   if (scrollContainerRef.current) {
-                    scrollContainerRef.current.scrollLeft = index * 416;
+                    scrollContainerRef.current.scrollLeft = index * 316;
                   }
                 }}
                 className={`w-2 h-2 rounded-full transition-colors ${
-                  index === Math.floor((scrollContainerRef.current?.scrollLeft || 0) / 416)
+                  index === Math.floor((scrollContainerRef.current?.scrollLeft || 0) / 316)
                     ? 'bg-primary'
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}

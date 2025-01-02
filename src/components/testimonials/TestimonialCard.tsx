@@ -11,7 +11,7 @@ export default function TestimonialCard({ testimonial, onClick }: TestimonialCar
   return (
     <motion.button
       onClick={onClick}
-      className="flex-none w-[400px] bg-white rounded-xl shadow-sm p-6 mx-2 text-left cursor-pointer"
+      className="flex-none w-[300px] bg-white rounded-xl shadow-sm p-5 mx-2 text-left cursor-pointer"
       whileHover={{ scale: 1.02, y: -5 }}
       whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0, y: 20 }}
@@ -26,10 +26,10 @@ export default function TestimonialCard({ testimonial, onClick }: TestimonialCar
         <img
           src={testimonial.avatar}
           alt={testimonial.name}
-          className="w-16 h-16 rounded-full object-cover"
+          className="w-12 h-12 rounded-full object-cover"
         />
         <div>
-          <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
+          <h3 className="text-sm font-semibold text-gray-900">{testimonial.name}</h3>
           <p className="text-sm text-gray-600">{testimonial.role}</p>
           <div className="flex items-center mt-1">
             <p className="text-sm text-primary">{testimonial.company}</p>
