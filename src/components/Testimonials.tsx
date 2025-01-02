@@ -103,7 +103,7 @@ export default function Testimonials() {
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
-              </motion.button>
+              />
             ))}
           </motion.div>
         </div>
