@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, MapPin, Loader2 } from 'lucide-react';
+import { Mail, MapPin, Loader2, Phone } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { companyInfo } from '../constants/content';
 
@@ -118,7 +118,16 @@ export default function Contact() {
               <h3 className="text-xl font-semibold text-gray-900 mb-6">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-indigo-600 mt-1" />
+                  <Phone className="h-6 w-6 text-[#FFD700] mt-1" />
+                  <div>
+                    <p className="font-medium text-gray-900 mb-1">Phone</p>
+                    <a href={`tel:${companyInfo.phone}`} className="text-gray-600 hover:text-[#FFD700] transition-colors">
+                      {companyInfo.phone}
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <Mail className="h-6 w-6 text-[#FFD700] mt-1" />
                   <div>
                     <p className="font-medium text-gray-900 mb-1">Email</p>
                     <a href={`mailto:${companyInfo.email}`} className="text-gray-600 hover:text-[#FFD700] transition-colors">
@@ -127,7 +136,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-indigo-600 mt-1" />
+                  <MapPin className="h-6 w-6 text-[#FFD700] mt-1" />
                   <div>
                     <p className="font-medium text-gray-900 mb-1">Location</p>
                     <address className="text-gray-600 not-italic">

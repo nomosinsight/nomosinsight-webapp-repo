@@ -4,6 +4,7 @@ export const companyInfo = {
   description: 'A dynamic IT solutions agency specializing in custom software development, AI integration, and cloud solutions.',
   location: '1001-02, Sarthana Business Hub, Sarthana Jakat Naka, Nirmal Nagar Society, Nana Varachha, Surat, Khadsad, Gujarat 395006',
   email: 'info.nomosinsight@gmail.com',
+  phone: '+91 7202030030',
   upworkProfile: 'https://www.upwork.com/agencies/1865052887991646821/',
   stats: {
     experience: '5+ years',
