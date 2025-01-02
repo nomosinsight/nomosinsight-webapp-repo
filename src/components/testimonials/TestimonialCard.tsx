@@ -11,7 +11,7 @@ export default function TestimonialCard({ testimonial, onClick }: TestimonialCar
   return (
     <motion.button
       onClick={onClick}
-      className="flex-none w-[300px] bg-white rounded-xl shadow-sm p-5 mx-2 text-left cursor-pointer"
+      className="flex-none w-[300px] bg-white rounded-xl shadow-sm p-6 mx-2 text-left cursor-pointer"
       whileHover={{ scale: 1.02, y: -5 }}
       whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0, y: 20 }}
@@ -22,25 +22,8 @@ export default function TestimonialCard({ testimonial, onClick }: TestimonialCar
         damping: 20
       }}
     >
-      <div className="flex items-start space-x-4 mb-4">
-        <img
-          src={testimonial.avatar}
-          alt={testimonial.name}
-          className="w-12 h-12 rounded-full object-cover"
-        />
-        <div>
-          <h3 className="text-sm font-semibold text-gray-900">{testimonial.name}</h3>
-          <p className="text-sm text-gray-600">{testimonial.role}</p>
-          <div className="flex items-center mt-1">
-            <p className="text-sm text-primary">{testimonial.company}</p>
-            <span className="mx-2 text-gray-300">•</span>
-            <p className="text-sm text-gray-500">{testimonial.location}</p>
-          </div>
-        </div>
-      </div>
-
       {testimonial.rating && (
-        <div className="flex mb-3">
+        <div className="flex mb-4">
           {[...Array(testimonial.rating)].map((_, i) => (
             <Star
               key={i}
@@ -49,10 +32,20 @@ export default function TestimonialCard({ testimonial, onClick }: TestimonialCar
           ))}
         </div>
       )}
-
-      <blockquote className="text-gray-600 leading-relaxed">
+      
+      <blockquote className="text-gray-600 leading-relaxed mb-4">
         "{testimonial.quote}"
       </blockquote>
+      
+      <div className="border-t pt-4">
+        <h3 className="text-sm font-semibold text-gray-900">{testimonial.name}</h3>
+        <p className="text-sm text-gray-600">{testimonial.role}</p>
+        <div className="flex items-center mt-1">
+          <p className="text-sm text-primary">{testimonial.company}</p>
+          <span className="mx-2 text-gray-300">•</span>
+          <p className="text-sm text-gray-500">{testimonial.location}</p>
+        </div>
+      </div>
     </motion.button>
   );
 }

@@ -47,22 +47,15 @@ export default function TestimonialModal({ testimonial, onClose }: TestimonialMo
                   </button>
                 </div>
 
-                <div className="flex items-start space-x-4 mb-6">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover"
-                  />
-                  <div>
-                    <Dialog.Title className="text-xl font-semibold text-gray-900">
-                      {testimonial.name}
-                    </Dialog.Title>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                    <div className="flex items-center mt-1">
-                      <p className="text-sm text-primary">{testimonial.company}</p>
-                      <span className="mx-2 text-gray-300">•</span>
-                      <p className="text-sm text-gray-500">{testimonial.location}</p>
-                    </div>
+                <div className="mb-6">
+                  <Dialog.Title className="text-xl font-semibold text-gray-900 mb-2">
+                    {testimonial.name}
+                  </Dialog.Title>
+                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <div className="flex items-center mt-1">
+                    <p className="text-sm text-primary">{testimonial.company}</p>
+                    <span className="mx-2 text-gray-300">•</span>
+                    <p className="text-sm text-gray-500">{testimonial.location}</p>
                   </div>
                 </div>
 

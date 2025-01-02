@@ -104,7 +104,7 @@ export default function Hero() {
         <motion.div
           ref={containerRef}
           style={prefersReducedMotion ? {} : { opacity }}
-          className="py-16 md:py-4"
+          className="py-16 md:py-8"
         >
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <motion.div className="flex-1 text-left"
@@ -187,7 +187,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Hero Image Section */}
-            <div className="relative w-1/3 lg:w-2/5">
+            <div className="relative w-1/3 lg:w-2/5 hidden md:block">
               <motion.div
                 ref={imageRef}
                 style={{ y: springY, scale }}
@@ -210,7 +210,7 @@ export default function Hero() {
               </motion.div>
 
               {/* Floating Elements */}
-              <motion.div 
+              <motion.div
                 className="absolute -top-8 -right-8 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
